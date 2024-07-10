@@ -1,0 +1,79 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+}
+
+#chess-table {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+  border-collapse: collapse;
+}
+
+td {
+  position: relative;
+  border: 1px inset black;
+  margin: 0;
+  text-align: center;
+  font-size: 45px;
+}
+
+th,
+td {
+  width: 60px;
+  height: 60px;
+}
+tbody {
+  border: 2px solid rgb(7, 7, 7);
+  border-radius: 5px;
+  background-color: rgb(255, 254, 251);
+}
+
+.letters,
+.numbers {
+  text-align: center;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.Black{
+  background-color: rgb(82, 92, 93);
+}
+.White {
+  background-color: rgb(165, 161, 152);
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.tooltip:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltip:after
+ {
+  content: attr(data-tooltip);
+  visibility: hidden;
+  opacity: 0;
+  font-size: 12px;
+  width: 90px;
+  background-color: darkcyan;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 3;
+}
+
+ td.Black:hover {
+  background-color: black;
+  color:wheat;
+}
+ td.White:hover {
+  color: rgb(10, 61, 61);
+  background-color: wheat;
+}
